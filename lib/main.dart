@@ -1,11 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_localizations/flutter_localizations.dart';
+import 'package:pharmacy_project/generated/l10n.dart';
 import 'package:pharmacy_project/layout/view/pharmacy_layout.dart';
 import 'package:pharmacy_project/shared/bloc_observer.dart';
 
 
 void main() {
   Bloc.observer = MyBlocObserver();
+
 
   runApp(const Pharmacy());
 }
@@ -18,13 +21,20 @@ class Pharmacy extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
+        locale: const Locale('en'),
+        localizationsDelegates: const [
+          S.delegate,
+          GlobalMaterialLocalizations.delegate,
+          GlobalWidgetsLocalizations.delegate,
+          GlobalCupertinoLocalizations.delegate,
+        ],
+        supportedLocales: S.delegate.supportedLocales,
       theme: ThemeData(
         appBarTheme: const AppBarTheme(
           color: Colors.white,
           elevation: 0
         ),
         scaffoldBackgroundColor: Colors.white,
-
       ),
       home: const AppLayout()
     );
