@@ -25,12 +25,14 @@ class AppLayout extends StatelessWidget {
                         onDestinationSelected: (int index) {
                           cubit.changeSelectedSideBarItem(index);
                         },
-                        backgroundColor: Colors.grey[200],
                         destinations: cubit.navigationRailItem,
                         selectedIndex: cubit.currentIndex,
-                        labelType: NavigationRailLabelType.selected,
-                        minWidth: MediaQuery.of(context).size.width * 0.06,
+                        labelType: NavigationRailLabelType.all,
+                        minWidth: MediaQuery.of(context).size.width * 0.08,
                       ),
+                    ),
+                    const SizedBox(
+                      width: 30,
                     ),
                     Expanded(
                       child: cubit.screens[cubit.currentIndex],

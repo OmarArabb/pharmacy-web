@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
+import 'package:pharmacy_project/constants.dart';
 import 'package:pharmacy_project/generated/l10n.dart';
 import 'package:pharmacy_project/layout/view/pharmacy_layout.dart';
 import 'package:pharmacy_project/shared/bloc_observer.dart';
@@ -30,6 +31,29 @@ class Pharmacy extends StatelessWidget {
         ],
         supportedLocales: S.delegate.supportedLocales,
       theme: ThemeData(
+        textTheme: TextTheme(
+          titleLarge : TextStyle(
+            color: secondaryColor
+          )
+        ),
+        iconTheme: IconThemeData(
+          color: secondaryColor
+        ),
+        navigationRailTheme: NavigationRailThemeData(
+          unselectedIconTheme: IconThemeData(
+            color: thirdColor
+          ),
+          unselectedLabelTextStyle: TextStyle(
+            color: thirdColor
+          ),
+          backgroundColor: mainColor,
+          selectedLabelTextStyle: TextStyle(
+            color: secondaryColor
+          ),
+          selectedIconTheme: IconThemeData(
+            color: secondaryColor,
+          )
+        ),
         appBarTheme: const AppBarTheme(
           color: Colors.white,
           elevation: 0
