@@ -1,4 +1,19 @@
 {
-  "productScreenTitle": "P R O D U C T S"
+  "products": "المنتجات",
+  "addItems": "ٳضافة منتجات",
+  "orders": "الطلبات",
+  "report": "التقرير",
+  "numberItem" : "الرقم",
+  "imageItem" : "الصورة",
+  "nameItem" : "الاسم",
+  "scientificNameItem" : "الاسم العلمي",
+  "categoryItem" : "التصنيف",
+  "factoryItem" : "المصنع",
+  "expDateItem" : "تاريخ انتهاء الصلاحية",
+  "quantityItem" : "الكمية",
+  "priceItem" : "السعر",
+
+
+  "search" : "بحث"
 
 }

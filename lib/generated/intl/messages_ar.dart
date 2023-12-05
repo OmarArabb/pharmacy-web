@@ -22,7 +22,21 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
-        "productScreenTitle":
-            MessageLookupByLibrary.simpleMessage("P R O D U C T S")
+        "addItems": MessageLookupByLibrary.simpleMessage("ٳضافة منتجات"),
+        "categoryItem": MessageLookupByLibrary.simpleMessage("التصنيف"),
+        "expDateItem":
+            MessageLookupByLibrary.simpleMessage("تاريخ انتهاء الصلاحية"),
+        "factoryItem": MessageLookupByLibrary.simpleMessage("المصنع"),
+        "imageItem": MessageLookupByLibrary.simpleMessage("الصورة"),
+        "nameItem": MessageLookupByLibrary.simpleMessage("الاسم"),
+        "numberItem": MessageLookupByLibrary.simpleMessage("الرقم"),
+        "orders": MessageLookupByLibrary.simpleMessage("الطلبات"),
+        "priceItem": MessageLookupByLibrary.simpleMessage("السعر"),
+        "products": MessageLookupByLibrary.simpleMessage("المنتجات"),
+        "quantityItem": MessageLookupByLibrary.simpleMessage("الكمية"),
+        "report": MessageLookupByLibrary.simpleMessage("التقرير"),
+        "scientificNameItem":
+            MessageLookupByLibrary.simpleMessage("الاسم العلمي"),
+        "search": MessageLookupByLibrary.simpleMessage("بحث")
       };
 }

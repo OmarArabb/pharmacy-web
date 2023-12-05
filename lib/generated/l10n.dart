@@ -50,11 +50,141 @@ class S {
     return Localizations.of<S>(context, S);
   }
 
-  /// `P R O D U C T S`
-  String get productScreenTitle {
+  /// `Products`
+  String get products {
     return Intl.message(
-      'P R O D U C T S',
-      name: 'productScreenTitle',
+      'Products',
+      name: 'products',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Add Items`
+  String get addItems {
+    return Intl.message(
+      'Add Items',
+      name: 'addItems',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Orders`
+  String get orders {
+    return Intl.message(
+      'Orders',
+      name: 'orders',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Report`
+  String get report {
+    return Intl.message(
+      'Report',
+      name: 'report',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `No.`
+  String get numberItem {
+    return Intl.message(
+      'No.',
+      name: 'numberItem',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Image`
+  String get imageItem {
+    return Intl.message(
+      'Image',
+      name: 'imageItem',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Name`
+  String get nameItem {
+    return Intl.message(
+      'Name',
+      name: 'nameItem',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Scientific Name`
+  String get scientificNameItem {
+    return Intl.message(
+      'Scientific Name',
+      name: 'scientificNameItem',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Category`
+  String get categoryItem {
+    return Intl.message(
+      'Category',
+      name: 'categoryItem',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Factory`
+  String get factoryItem {
+    return Intl.message(
+      'Factory',
+      name: 'factoryItem',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Exp Date`
+  String get expDateItem {
+    return Intl.message(
+      'Exp Date',
+      name: 'expDateItem',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Quantity`
+  String get quantityItem {
+    return Intl.message(
+      'Quantity',
+      name: 'quantityItem',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Price`
+  String get priceItem {
+    return Intl.message(
+      'Price',
+      name: 'priceItem',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Search`
+  String get search {
+    return Intl.message(
+      'Search',
+      name: 'search',
       desc: '',
       args: [],
     );

@@ -15,5 +15,3 @@ class ProductsScreen extends StatelessWidget {
     );
   }
 }
-
-

@@ -1,3 +1,18 @@
 {
-  "productScreenTitle": "P R O D U C T S"
+  "products": "Products",
+  "addItems": "Add Items",
+  "orders": "Orders",
+  "report": "Report",
+  "numberItem" : "No.",
+  "imageItem" : "Image",
+  "nameItem" : "Name",
+  "scientificNameItem" : "Scientific Name",
+  "categoryItem" : "Category",
+  "factoryItem" : "Factory",
+  "expDateItem" : "Exp Date",
+  "quantityItem" : "Quantity",
+  "priceItem" : "Price",
+
+
+  "search" : "Search"
 }
