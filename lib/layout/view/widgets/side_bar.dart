@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:pharmacy_project/layout/cubit/cubit.dart';
+import 'package:pharmacy_project/shared/constants.dart';
 
 class SideBar extends StatelessWidget {
   const SideBar({
@@ -15,7 +16,7 @@ class SideBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ClipRRect(
-      borderRadius: BorderRadius.circular(18),
+      borderRadius: borderRadius,
       child: NavigationRail(
           onDestinationSelected: (int index) {
             cubit.changeSelectedSideBarItem(index);

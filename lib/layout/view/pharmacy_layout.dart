@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:pharmacy_project/generated/l10n.dart';
 import 'package:pharmacy_project/layout/cubit/cubit.dart';
 import 'package:pharmacy_project/layout/cubit/states.dart';
 import 'package:pharmacy_project/layout/view/widgets/custom_text_field.dart';
 import 'package:pharmacy_project/layout/view/widgets/side_bar.dart';
 import 'package:pharmacy_project/main/cubit/cubit.dart';
+import 'package:pharmacy_project/shared/constants.dart';
 import 'package:pharmacy_project/shared/styles/colors.dart';
 
 class PharmacyLayout extends StatelessWidget {
@@ -63,7 +63,7 @@ class PharmacyLayout extends StatelessWidget {
                           Container(
                             decoration: BoxDecoration(
                               color: mainColor,
-                              borderRadius: BorderRadius.circular(18)
+                              borderRadius: borderRadius
                             ),
                             height: 60,
                             child: Padding(
@@ -72,10 +72,11 @@ class PharmacyLayout extends StatelessWidget {
                                 children: [
                                   Text(
                                     'M e d i x i f y',
-                                    style: GoogleFonts.courgette(
-                                          color: secondaryColor,
-                                          fontWeight: FontWeight.bold,
-                                          fontSize: 24,
+                                    style: TextStyle(
+                                      fontFamily: 'Courgette',
+                                      color: secondaryColor,
+                                      fontWeight: FontWeight.bold,
+                                      fontSize: 24,
                                     )
                                   ),
                                   const Spacer(),

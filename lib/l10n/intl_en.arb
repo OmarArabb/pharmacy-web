@@ -14,5 +14,8 @@
   "priceItem" : "Price",
 
 
-  "search" : "Search"
+  "search" : "Search",
+  "addItemBu" : "Add Item",
+  "saveItems" : "Save"
+
 }

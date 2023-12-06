@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:pharmacy_project/generated/l10n.dart';
 import 'package:pharmacy_project/modules/products/views/widgets/label_text.dart';
+import 'package:pharmacy_project/shared/constants.dart';
 import 'package:pharmacy_project/shared/styles/colors.dart';
 
 class ProductsTable extends StatelessWidget {
@@ -18,7 +20,7 @@ class ProductsTable extends StatelessWidget {
       headingRowHeight: 60,
       clipBehavior: Clip.antiAlias,
       border: TableBorder.all(
-          borderRadius: BorderRadius.circular(18), color: mainColor),
+          borderRadius: borderRadius, color: mainColor),
       headingRowColor: MaterialStateColor.resolveWith((states) {
         return mainColor;
       }),
@@ -41,8 +43,11 @@ class ProductsTable extends StatelessWidget {
           DataCell(SizedBox(
             height: 60,
             width: 60,
-            child: Image.network(
-                'https://th.bing.com/th/id/OIP.r_IMawYnBdpcaz8JIcYtqAHaHa?w=800&h=800&rs=1&pid=ImgDetMain'),
+            child: SvgPicture.asset(
+              'assets/images/Remedy-rafiki.svg',
+              height: 50,
+              width: 50,
+            )
           )),
           const DataCell(Text('Name')),
           const DataCell(Text('Scientific name')),

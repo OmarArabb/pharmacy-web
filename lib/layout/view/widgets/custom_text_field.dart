@@ -1,3 +1,5 @@
+// ignore_for_file: must_be_immutable
+
 import 'package:flutter/material.dart';
 import 'package:pharmacy_project/shared/styles/colors.dart';
 
@@ -6,13 +8,17 @@ class CustomTextField extends StatelessWidget {
       {super.key,
       this.icon,
       required this.controller,
-      required this.onChange,
-      required this.label});
+      this.onChange,
+      required this.label,
+      this.onSubmit,
+      this.autoFoucs = false});
 
   final TextEditingController controller;
   final String label;
   IconData? icon;
-  final Function(String value) onChange;
+  final Function(String value)? onChange;
+  final Function(String value)? onSubmit;
+  final bool autoFoucs;
 
   @override
   Widget build(BuildContext context) {
@@ -20,8 +26,10 @@ class CustomTextField extends StatelessWidget {
       height: 30,
       width: 160,
       child: TextField(
+        autofocus: autoFoucs,
         controller: controller,
         onChanged: onChange,
+        onSubmitted: onSubmit,
         decoration: InputDecoration(
             label: Row(
               mainAxisSize: MainAxisSize.min,
