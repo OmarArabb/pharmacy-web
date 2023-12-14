@@ -6,27 +6,22 @@ class AddProductsCubit extends Cubit<AddProductsStates> {
 
   static AddProductsCubit get(context) => BlocProvider.of(context);
 
-  // List<bool> isFoucs = [
-  //   true,
-  //   false,
-  //   false,
-  //   false,
-  //   false,
-  //   false,
-  //   false,
-  // ];
-  // int currentindex = 0;
-  //
-  // void changeAutoFoucs(int index) {
-  //
-  //   isFoucs.fillRange(0, 6, false);
-  //   if (index == 6) {
-  //     return;
-  //   }
-  //   currentindex += 1 ;
-  //   isFoucs[currentindex] = true;
-  //
-  //   emit(ChangeIndexOfTextFieldState(isFoucs));
-  //
-  // }
+  String image = '';
+
+
+  List<Map<String,dynamic>> products = [];
+
+  Future<void> addProduct(Map<String,dynamic> map) async {
+    image = '';
+    products.add(map);
+    emit(AddProductState());
+  }
+
+
+  Future<void> saveProducts()async {
+    products.clear();
+    emit(SaveProductsState());
+  }
+
+
 }

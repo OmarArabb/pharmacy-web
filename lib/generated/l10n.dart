@@ -190,10 +190,10 @@ class S {
     );
   }
 
-  /// `Add Item`
+  /// `Add the Item`
   String get addItemBu {
     return Intl.message(
-      'Add Item',
+      'Add the Item',
       name: 'addItemBu',
       desc: '',
       args: [],

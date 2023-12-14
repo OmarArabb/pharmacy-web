@@ -4,9 +4,12 @@ import 'package:pharmacy_project/modules/products/views/widgets/products_table.d
 class ProductsScreen extends StatelessWidget {
   const ProductsScreen({super.key});
 
+
   @override
   Widget build(BuildContext context) {
     return const CustomScrollView(
+      scrollDirection: Axis.vertical,
+
       slivers: [
         SliverToBoxAdapter(
           child: ProductsTable(),

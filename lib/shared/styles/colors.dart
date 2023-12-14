@@ -2,11 +2,11 @@
 
 import 'package:flutter/material.dart';
 
-Color mainColor = const Color(0xff17273D);
+Color mainColor = const Color(0xFF17273D);
 
 Color secondaryColor = const Color(0xFFF4B151);
 
-Color thirdColor = const Color(0xff029791);
+Color thirdColor = const Color(0xFF029791);
 
 
 // Color YankeesBlue= HexColor('17273D');

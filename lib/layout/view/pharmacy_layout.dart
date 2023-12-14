@@ -3,7 +3,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:pharmacy_project/generated/l10n.dart';
 import 'package:pharmacy_project/layout/cubit/cubit.dart';
 import 'package:pharmacy_project/layout/cubit/states.dart';
-import 'package:pharmacy_project/layout/view/widgets/custom_text_field.dart';
+import 'package:pharmacy_project/shared/componentes/custom_text_form_field.dart';
 import 'package:pharmacy_project/layout/view/widgets/side_bar.dart';
 import 'package:pharmacy_project/main/cubit/cubit.dart';
 import 'package:pharmacy_project/shared/constants.dart';
@@ -80,7 +80,7 @@ class PharmacyLayout extends StatelessWidget {
                                     )
                                   ),
                                   const Spacer(),
-                                  CustomTextField(
+                                  CustomTextFormField(
                                     controller: searchController,
                                     onChange: (value) {},
                                     label: translator.search,

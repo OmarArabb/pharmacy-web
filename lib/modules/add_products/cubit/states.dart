@@ -2,16 +2,7 @@ abstract class AddProductsStates{}
 
 class AddProductsInitialStates extends AddProductsStates{}
 
-class ChangeIndexOfTextFieldState extends AddProductsStates{
+class AddProductState extends AddProductsStates{}
 
-  final List<bool> isFoucs;
+class SaveProductsState extends AddProductsStates{}
 
-  ChangeIndexOfTextFieldState(this.isFoucs);
-}
-
-class AddProductState extends AddProductsStates{
-  final List<Map<String,dynamic>> products ;
-
-  AddProductState({required this.products});
-
-}

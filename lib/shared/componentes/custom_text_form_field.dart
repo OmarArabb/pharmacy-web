@@ -3,33 +3,35 @@
 import 'package:flutter/material.dart';
 import 'package:pharmacy_project/shared/styles/colors.dart';
 
-class CustomTextField extends StatelessWidget {
-  CustomTextField(
+class CustomTextFormField extends StatelessWidget {
+  CustomTextFormField(
       {super.key,
       this.icon,
       required this.controller,
       this.onChange,
       required this.label,
       this.onSubmit,
-      this.autoFoucs = false});
+      this.validator,
+      });
 
   final TextEditingController controller;
   final String label;
   IconData? icon;
   final Function(String value)? onChange;
   final Function(String value)? onSubmit;
-  final bool autoFoucs;
+  final String? Function(String? value)? validator;
 
   @override
   Widget build(BuildContext context) {
     return SizedBox(
       height: 30,
       width: 160,
-      child: TextField(
-        autofocus: autoFoucs,
+      child: TextFormField(
+        textInputAction: TextInputAction.next,
         controller: controller,
         onChanged: onChange,
-        onSubmitted: onSubmit,
+        onFieldSubmitted: onSubmit,
+        validator: validator,
         decoration: InputDecoration(
             label: Row(
               mainAxisSize: MainAxisSize.min,
