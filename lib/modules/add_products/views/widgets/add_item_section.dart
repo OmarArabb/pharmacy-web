@@ -114,11 +114,10 @@ class AddItemSection extends StatelessWidget {
                         quantityContoller.text.isEmpty ||
                         priceContoller.text.isEmpty) {
                       Fluttertoast.showToast(
-                          msg: 'Please,Fill all data ',
+                          msg: translator.emptyData,
                           timeInSecForIosWeb: 2,
-                          webShowClose: true,
-                          webBgColor:
-                              "linear-gradient(to right, #1E334F, #3B639C)",
+                          webBgColor: "linear-gradient(to right, #1E334F, #3B639C)",
+                          webPosition: translator.toastPosition,
                           textColor: secondaryColor);
                     } else {
                       cubit.addProduct({

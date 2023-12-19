@@ -25,6 +25,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "addItemBu": MessageLookupByLibrary.simpleMessage("ٳضافة المنتج"),
         "addItems": MessageLookupByLibrary.simpleMessage("ٳضافة منتجات"),
         "categoryItem": MessageLookupByLibrary.simpleMessage("التصنيف"),
+        "emptyData":
+            MessageLookupByLibrary.simpleMessage("يرجى ملء كامل البيانات"),
         "expDateItem":
             MessageLookupByLibrary.simpleMessage("تاريخ انتهاء الصلاحية"),
         "factoryItem": MessageLookupByLibrary.simpleMessage("المصنع"),
@@ -39,6 +41,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "saveItems": MessageLookupByLibrary.simpleMessage("حفظ"),
         "scientificNameItem":
             MessageLookupByLibrary.simpleMessage("الاسم العلمي"),
-        "search": MessageLookupByLibrary.simpleMessage("بحث")
+        "search": MessageLookupByLibrary.simpleMessage("بحث"),
+        "toastPosition": MessageLookupByLibrary.simpleMessage("left")
       };
 }

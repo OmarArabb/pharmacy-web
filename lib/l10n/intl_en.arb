@@ -16,6 +16,8 @@
 
   "search" : "Search",
   "addItemBu" : "Add the Item",
-  "saveItems" : "Save"
+  "saveItems" : "Save",
+  "emptyData" : "Please,Fill all data",
+  "toastPosition" : "right"
 
 }

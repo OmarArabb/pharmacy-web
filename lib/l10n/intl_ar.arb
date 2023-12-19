@@ -18,6 +18,9 @@
 
 
   "addItemBu" : "ٳضافة المنتج",
-  "saveItems" : "حفظ"
+  "saveItems" : "حفظ",
+  "emptyData" : "يرجى ملء كامل البيانات",
+  "toastPosition" : "left"
+
 
 }

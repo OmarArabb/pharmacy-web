@@ -1,5 +1,6 @@
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:pharmacy_project/modules/add_products/cubit/states.dart';
+import 'package:pharmacy_project/shared/network/dio_helper.dart';
 
 class AddProductsCubit extends Cubit<AddProductsStates> {
   AddProductsCubit() : super(AddProductsInitialStates());
@@ -19,8 +20,16 @@ class AddProductsCubit extends Cubit<AddProductsStates> {
 
 
   Future<void> saveProducts()async {
+    // emit(SaveProductsLoadingState());
+    // DioHelper.saveData(endPoint: '', data: products).then((value){
+    //   products.clear();
+    //   emit(SaveProductsSuccessState());
+    // }).catchError((error){
+    //   emit(SaveProductsErrorState(error));
+    // });
+
     products.clear();
-    emit(SaveProductsState());
+    emit(SaveProductsLoadingState());
   }
 
 

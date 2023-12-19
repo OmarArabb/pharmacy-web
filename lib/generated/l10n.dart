@@ -209,6 +209,26 @@ class S {
       args: [],
     );
   }
+
+  /// `Please,Fill all data`
+  String get emptyData {
+    return Intl.message(
+      'Please,Fill all data',
+      name: 'emptyData',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `right`
+  String get toastPosition {
+    return Intl.message(
+      'right',
+      name: 'toastPosition',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

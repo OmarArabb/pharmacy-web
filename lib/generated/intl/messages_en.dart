@@ -25,6 +25,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "addItemBu": MessageLookupByLibrary.simpleMessage("Add the Item"),
         "addItems": MessageLookupByLibrary.simpleMessage("Add Items"),
         "categoryItem": MessageLookupByLibrary.simpleMessage("Category"),
+        "emptyData":
+            MessageLookupByLibrary.simpleMessage("Please,Fill all data"),
         "expDateItem": MessageLookupByLibrary.simpleMessage("Exp Date"),
         "factoryItem": MessageLookupByLibrary.simpleMessage("Factory"),
         "imageItem": MessageLookupByLibrary.simpleMessage("Image"),
@@ -38,6 +40,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "saveItems": MessageLookupByLibrary.simpleMessage("Save"),
         "scientificNameItem":
             MessageLookupByLibrary.simpleMessage("Scientific Name"),
-        "search": MessageLookupByLibrary.simpleMessage("Search")
+        "search": MessageLookupByLibrary.simpleMessage("Search"),
+        "toastPosition": MessageLookupByLibrary.simpleMessage("right")
       };
 }

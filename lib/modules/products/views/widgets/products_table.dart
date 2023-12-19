@@ -24,6 +24,7 @@ class ProductsTable extends StatelessWidget {
       clipBehavior: Clip.antiAlias,
       border: TableBorder.all(
           borderRadius: borderRadius, color: mainColor),
+      columnSpacing: 24,
       headingRowColor: MaterialStateColor.resolveWith((states) {
         return mainColor;
       }),
