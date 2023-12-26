@@ -5,7 +5,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:pharmacy_project/modules/add_products/views/widgets/add_item_section.dart';
 import 'package:pharmacy_project/modules/add_products/cubit/cubit.dart';
 import 'package:pharmacy_project/modules/add_products/cubit/states.dart';
-import 'package:pharmacy_project/modules/add_products/views/widgets/added_products_table.dart';
+import 'package:pharmacy_project/modules/add_products/views/widgets/added_product_table.dart';
 
 class AddProductsScreen extends StatelessWidget {
   const AddProductsScreen({super.key});
@@ -20,7 +20,7 @@ class AddProductsScreen extends StatelessWidget {
 
         return Column(
           children: [
-            AddItemSection(),
+            const AddItemSection(),
             const SizedBox(
               height: 15,
             ),
@@ -30,7 +30,7 @@ class AddProductsScreen extends StatelessWidget {
                   scrollDirection: Axis.vertical,
                   slivers: [
                     SliverToBoxAdapter(
-                      child: AddedProductsTable(map : cubit.products),
+                      child: ProductTable(map : cubit.products,),
                     )
                   ],
                 ),

@@ -1,15 +1,16 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 import 'package:pharmacy_project/generated/l10n.dart';
+import 'package:pharmacy_project/modules/products/models/ProductsModel.dart';
 import 'package:pharmacy_project/modules/products/views/widgets/label_text.dart';
 import 'package:pharmacy_project/shared/constants.dart';
 import 'package:pharmacy_project/shared/styles/colors.dart';
 
 class ProductsTable extends StatelessWidget {
    const ProductsTable({
-    super.key,
+    super.key, required this.dataModel,
   });
 
+   final List<Data> dataModel;
 
 
   @override
@@ -41,25 +42,21 @@ class ProductsTable extends StatelessWidget {
         DataColumn(label: LabelText(data: translator.priceItem)),
       ],
       rows: List.generate(
-        18,
+        dataModel.length,
         (index) => DataRow(cells: <DataCell>[
           DataCell(Text('${index + 1}')),
           DataCell(SizedBox(
-            height: 60,
-            width: 60,
-            child: SvgPicture.asset(
-              'assets/images/Remedy-rafiki.svg',
-              height: 50,
-              width: 50,
-            )
+            height: 50,
+            width: 50,
+            child: Image.network('http://127.0.0.1:8000${dataModel[index].image}')
           )),
-          const DataCell(Text('Name')),
-          const DataCell(Text('Scientific name')),
-          const DataCell(Text('Category')),
-          const DataCell(Text('Factory')),
-          const DataCell(Text('Exp date')),
-          const DataCell(Text('Quantity')),
-          const DataCell(Text('Price')),
+          DataCell(Text(dataModel[index].marketingName!)),
+          DataCell(Text(dataModel[index].scientificName!)),
+          DataCell(Text(dataModel[index].categoryName!)),
+          DataCell(Text(dataModel[index].madeByName!)),
+          DataCell(Text(dataModel[index].expDate!)),
+          DataCell(Text(dataModel[index].quantity.toString())),
+          DataCell(Text(dataModel[index].price.toString())),
         ]),
       ),
     );

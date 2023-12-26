@@ -33,10 +33,10 @@ class PharmacyLayout extends StatelessWidget {
         selectedIcon: const Icon(Icons.feed),
         label: Text(translator.orders),
       ),
-      NavigationRailDestination(
-        icon: const Icon(Icons.insert_chart_outlined_rounded),
-        selectedIcon: const Icon(Icons.insert_chart_rounded),
-        label: Text(translator.report),
+      const NavigationRailDestination(
+        icon: Icon(Icons.settings),
+        selectedIcon: Icon(Icons.settings),
+        label: Text('Settings'),
       ),
     ];
 
@@ -62,25 +62,22 @@ class PharmacyLayout extends StatelessWidget {
                         children: [
                           Container(
                             decoration: BoxDecoration(
-                              color: mainColor,
-                              borderRadius: borderRadius
-                            ),
+                                color: mainColor, borderRadius: borderRadius),
                             height: 60,
                             child: Padding(
                               padding: const EdgeInsets.all(8.0),
                               child: Row(
                                 children: [
-                                  Text(
-                                    'M e d i x i f y',
-                                    style: TextStyle(
-                                      fontFamily: 'Courgette',
-                                      color: secondaryColor,
-                                      fontWeight: FontWeight.bold,
-                                      fontSize: 24,
-                                    )
-                                  ),
+                                  Text('M e d i x i f y',
+                                      style: TextStyle(
+                                        fontFamily: 'Courgette',
+                                        color: secondaryColor,
+                                        fontWeight: FontWeight.bold,
+                                        fontSize: 24,
+                                      )),
                                   const Spacer(),
                                   CustomTextFormField(
+                                    textInputAction: TextInputAction.none,
                                     controller: searchController,
                                     onChange: (value) {},
                                     label: translator.search,
@@ -93,7 +90,8 @@ class PharmacyLayout extends StatelessWidget {
                                       onPressed: () {
                                         MainCubit.get(context).changeLanguage();
                                       },
-                                      icon: const Icon(Icons.translate_outlined))
+                                      icon:
+                                          const Icon(Icons.translate_outlined))
                                 ],
                               ),
                             ),
@@ -105,9 +103,6 @@ class PharmacyLayout extends StatelessWidget {
                         ],
                       ),
                     ),
-                    // Expanded(
-                    //   child: cubit.screens[cubit.currentIndex],
-                    // ),
                   ],
                 ),
               ),

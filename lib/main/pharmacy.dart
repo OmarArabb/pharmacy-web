@@ -6,6 +6,7 @@ import 'package:pharmacy_project/layout/view/pharmacy_layout.dart';
 import 'package:pharmacy_project/main/cubit/cubit.dart';
 import 'package:pharmacy_project/main/cubit/states.dart';
 import 'package:pharmacy_project/modules/add_products/cubit/cubit.dart';
+import 'package:pharmacy_project/modules/products/cubit/cubit.dart';
 import 'package:pharmacy_project/shared/styles/app_theme.dart';
 
 class Pharmacy extends StatelessWidget {
@@ -19,6 +20,7 @@ class Pharmacy extends StatelessWidget {
         BlocProvider(
           create: (context) => MainCubit(),
         ),
+        BlocProvider(create: (context) => GetProductsCubit()..getProducts(),),
         BlocProvider(create: (context) => AddProductsCubit(),)
       ],
       child: BlocConsumer<MainCubit, MainStates>(

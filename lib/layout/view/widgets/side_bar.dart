@@ -19,7 +19,7 @@ class SideBar extends StatelessWidget {
       borderRadius: borderRadius,
       child: NavigationRail(
           onDestinationSelected: (int index) {
-            cubit.changeSelectedSideBarItem(index);
+            cubit.changeSelectedSideBarItem(index,context);
           },
           minWidth: MediaQuery.of(context).size.width * 0.07,
           destinations: navigationRailItem,

@@ -19,6 +19,7 @@ class CustomMaterialButton extends StatelessWidget {
       color: mainColor,
       child: Row(
         children: [
+          if(iconData != null)
           Icon(
             iconData,
             color: secondaryColor,

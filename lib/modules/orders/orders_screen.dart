@@ -31,7 +31,7 @@ class OrderItem extends StatelessWidget {
         padding: const EdgeInsets.all(12.0),
         child: InkWell(
           onTap: (){
-
+            showDialog(context: context, builder: (context) => const OrderDetails());
           },
           child: const Row(
             children: [
@@ -58,6 +58,28 @@ class OrderItem extends StatelessWidget {
     );
   }
 }
+
+class OrderDetails extends StatelessWidget {
+  const OrderDetails({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return AlertDialog(
+      title: Text(
+        'Order Id'
+      ),
+      content: Text('content'),
+      actions: [
+        TextButton(onPressed: (){
+          Navigator.pop(context);
+        },
+          child: Text('close'),
+        ),
+      ],
+    );
+  }
+}
+
 
 enum Color {
   inPreparation,
