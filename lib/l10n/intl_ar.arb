@@ -5,11 +5,11 @@
   "report": "التقرير",
   "numberItem" : "الرقم",
   "imageItem" : "الصورة",
-  "nameItem" : "الاسم",
+  "nameItem" : "الاسم بالعربية",
   "scientificNameItem" : "الاسم العلمي",
   "categoryItem" : "التصنيف",
   "factoryItem" : "المصنع",
-  "expDateItem" : "تاريخ انتهاء الصلاحية",
+  "expDateItem" : "انتهاء الصلاحية",
   "quantityItem" : "الكمية",
   "priceItem" : "السعر",
 
@@ -20,7 +20,28 @@
   "addItemBu" : "ٳضافة المنتج",
   "saveItems" : "حفظ",
   "emptyData" : "يرجى ملء كامل البيانات",
-  "toastPosition" : "left"
+  "toastPosition" : "left",
+
+  "settings" : "الٳعدادت",
+  "createNewCategory" : "ٳنشاء تصنيف جديد",
+  "createNewFactory" : "ٳنشاء مصنع جديد",
+  "enName" : "الاسم بالٳنجليزية",
+  "arName" : "الاسم بالعربية",
+  "create" : "ٳنشاء",
+  "changeLang" : "تغيير اللغة",
+  "close" : "ٳغلاق",
+  "selectCategory" : "اختر التصنيف",
+  "selectFactory" : "اختر المصنع",
+  "change" : "تغيير",
+
+  "factoryName" : "made_by_Arabic_name",
+  "categoryName" : "Arabic_Category_name",
+  "name" : "arabic_name",
+  "All" : "الكل",
+
+  "orderStatus": "{howMany, plural, zero{تم الٳرسال} one{قيد التحضير} other{مستلمة}}",
+  "orderPaymentStatus" : "{howMany, plural, zero{مدفوع} other{غير مدفوع}}",
+  "sp" : "ل.س"
 
 
 }

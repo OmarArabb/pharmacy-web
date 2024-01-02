@@ -13,17 +13,30 @@ class ProductsScreen extends StatelessWidget {
       listener: (context, state) {},
       builder: (context, state) {
         GetProductsCubit cubit = GetProductsCubit.get(context);
-
-        if(cubit.productsModel == null){
-          return const Center(child: CircularProgressIndicator());
+        if(state is GetProductsSuccessState){
+          if(cubit.productsModel!.message == 'not founde'){
+            return const Column(
+              children: [
+                SizedBox(
+                  height: 24
+                  ,
+                ),
+                Icon(Icons.error,size: 100,),
+                Text('Not Found Any Data',style: TextStyle(
+                  fontSize: 24
+                ),)
+              ],
+            );
+          }
+          return CustomScrollView(
+            slivers: [
+              SliverToBoxAdapter(
+                child: ProductsTable(dataModel: cubit.productsModel!.data!),
+              )
+            ],
+          );
         }
-        return CustomScrollView(
-          slivers: [
-            SliverToBoxAdapter(
-              child: ProductsTable(dataModel: cubit.productsModel!.data!),
-            )
-          ],
-        );
+        return const Center(child: CircularProgressIndicator());
       },
     );
   }

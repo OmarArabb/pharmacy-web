@@ -10,16 +10,13 @@ class DioHelper {
         receiveDataWhenStatusError: true,
       ),
     );
-
   }
 
-  static Future<void> postData({
+  static Future<Response<Map<String, dynamic>>> postData({
     required String url,
     required data,
-
   }) async {
-
-    await _dio!.post(
+    return await _dio!.post(
       url,
       data: data,
     );
@@ -32,6 +29,16 @@ class DioHelper {
     return await _dio!.get(
       url,
       queryParameters: query,
+    );
+  }
+
+  static Future<void> putData({
+    required String url,
+    Map<String, dynamic>? query,
+  }) async {
+    await _dio!.put(
+      url,
+      queryParameters: query
     );
   }
 }

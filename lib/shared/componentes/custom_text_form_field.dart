@@ -35,7 +35,8 @@ class CustomTextFormField extends StatelessWidget {
       width: 160,
       child: TextFormField(
         style: const TextStyle(
-          fontSize: 14
+          fontSize: 14,
+          color: Colors.black
         ),
         onTap: onTap,
         textInputAction: textInputAction,
@@ -55,7 +56,7 @@ class CustomTextFormField extends StatelessWidget {
                 ),
                 Text(
                   label,
-                  style: const TextStyle(fontSize: 12),
+                  style: const TextStyle(fontSize: 10,color: Colors.black),
                 )
               ],
             ),

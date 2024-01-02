@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:pharmacy_project/generated/l10n.dart';
 import 'package:pharmacy_project/modules/add_products/cubit/states.dart';
 import 'package:pharmacy_project/shared/network/dio_helper.dart';
 
@@ -7,6 +8,7 @@ class AddProductsCubit extends Cubit<AddProductsStates> {
   AddProductsCubit() : super(AddProductsInitialStates());
 
   TextEditingController nameContoller = TextEditingController();
+  TextEditingController arabicNameContoller = TextEditingController();
   TextEditingController scientificNameContoller = TextEditingController();
   TextEditingController categoryContoller = TextEditingController();
   TextEditingController factoryContoller = TextEditingController();
@@ -40,15 +42,17 @@ class AddProductsCubit extends Cubit<AddProductsStates> {
       "image": image,
       "marketing_name": nameContoller.text,
       "scientific_name": scientificNameContoller.text,
+      "arabic_name" : arabicNameContoller.text,
       "Category_name": categoryContoller.text,
       "made_by_name": factoryContoller.text,
       "exp_date": expDateContoller.text,
       "Quantity": quantityContoller.text,
       "Price": priceContoller.text,
-      "category_id" : categoryId.toString(),
-      "made_by_id" : factoryId.toString()
+      "category_id" : categoryId,
+      "made_by_id" : factoryId
     }).then((value) {
       image = '';
+      arabicNameContoller.clear();
       nameContoller.clear();
       scientificNameContoller.clear();
       categoryContoller.clear();
@@ -69,22 +73,22 @@ class AddProductsCubit extends Cubit<AddProductsStates> {
     print(factoryId);
   }
 
-  Future<void> getCategory() async {
+  Future<void> getCategory(context) async {
     categoryName.clear();
     DioHelper.getData(url: 'getAllCategorys').then((value) {
       category = value.data!['data'];
       for (var element in category) {
-        categoryName.add(element['Category_name']);
+        categoryName.add(element[S.of(context).categoryName]);
       }
     });
   }
 
-  Future<void> getFactory() async {
+  Future<void> getFactory(context) async {
     factoryName.clear();
     DioHelper.getData(url: 'getAllMadeby').then((value) {
       factory = value.data!['data'];
       for (var element in factory) {
-        factoryName.add(element['made_by_name']);
+        factoryName.add(element[S.of(context).factoryName]);
       }
       print(factoryName);
     });

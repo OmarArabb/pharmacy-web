@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:pharmacy_project/generated/l10n.dart';
 import 'package:pharmacy_project/modules/add_products/views/widgets/custom_alert_dialog_content.dart';
 
 class CustomAlertDialog extends StatelessWidget {
@@ -12,7 +13,7 @@ class CustomAlertDialog extends StatelessWidget {
   Widget build(BuildContext context) {
 
     return AlertDialog(
-      title: const Text('Select Category'),
+      title: Text(isCategory ? S.of(context).selectCategory : S.of(context).selectFactory),
       content: CustomAlertDialogContent(
         isCategory: isCategory,
       ),
@@ -21,7 +22,7 @@ class CustomAlertDialog extends StatelessWidget {
             onPressed: () {
               Navigator.pop(context);
             },
-            child: const Text('close'))
+            child: Text(S.of(context).close))
       ],
     );
   }

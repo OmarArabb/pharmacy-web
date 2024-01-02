@@ -1,14 +1,13 @@
 // ignore_for_file: must_be_immutable
 
 import 'package:flutter/material.dart';
-import 'package:fluttertoast/fluttertoast.dart';
 import 'package:pharmacy_project/generated/l10n.dart';
 import 'package:pharmacy_project/layout/view/widgets/custom_material_button.dart';
 import 'package:pharmacy_project/modules/add_products/cubit/cubit.dart';
 import 'package:pharmacy_project/modules/add_products/views/widgets/custom_alert_dialog.dart';
 import 'package:pharmacy_project/shared/componentes/custom_text_form_field.dart';
 import 'package:pharmacy_project/modules/add_products/views/widgets/add_image.dart';
-import 'package:pharmacy_project/shared/styles/colors.dart';
+import 'package:pharmacy_project/shared/functions/functions.dart';
 
 class AddItemSection extends StatelessWidget {
   const AddItemSection({
@@ -40,7 +39,7 @@ class AddItemSection extends StatelessWidget {
                 CustomTextFormField(
                   textInputAction: TextInputAction.next,
                   controller: cubit.nameContoller,
-                  label: translator.nameItem,
+                  label: translator.enName,
                 ),
                 const SizedBox(
                   width: 10,
@@ -73,13 +72,21 @@ class AddItemSection extends StatelessWidget {
             ),
             Row(
               children: [
+                SizedBox(
+                  width: 10,
+                ),
+                CustomTextFormField(
+                  textInputAction: TextInputAction.next,
+                  controller: cubit.arabicNameContoller,
+                  label: translator.arName,
+                ),
                 const SizedBox(
                   width: 10,
                 ),
                 CustomTextFormField(
                   textInputAction: TextInputAction.none,
                   controller: cubit.expDateContoller,
-                  label: translator.expDateItem,
+                  label: '${translator.expDateItem} : yyyy-mm-dd',
                 ),
                 const SizedBox(
                   width: 10,
@@ -104,7 +111,7 @@ class AddItemSection extends StatelessWidget {
                   width: 10,
                 ),
                 CustomTextFormField(
-                  textInputAction: TextInputAction.none,
+                  textInputAction: TextInputAction.next,
                   onTap: () {
                     showDialog(
                       context: context,
@@ -131,6 +138,7 @@ class AddItemSection extends StatelessWidget {
                   text: translator.addItemBu,
                   onPressed: () async {
                     if (cubit.nameContoller.text.isEmpty ||
+                        cubit.arabicNameContoller.text.isEmpty ||
                         cubit.scientificNameContoller.text.isEmpty ||
                         cubit.categoryContoller.text.isEmpty ||
                         cubit.factoryContoller.text.isEmpty ||
@@ -138,20 +146,14 @@ class AddItemSection extends StatelessWidget {
                         cubit.quantityContoller.text.isEmpty ||
                         cubit.priceContoller.text.isEmpty ||
                         cubit.image.isEmpty) {
-                      Fluttertoast.showToast(
-                          msg: translator.emptyData,
-                          timeInSecForIosWeb: 2,
-                          webBgColor:
-                              "linear-gradient(to right, #1E334F, #3B639C)",
-                          webPosition: translator.toastPosition,
-                          textColor: secondaryColor);
+                      showToast(translator);
                     } else {
                       cubit.addProductToMap();
                     }
                   },
                 ),
                 const SizedBox(
-                  width: 10,
+                  width: 12,
                 ),
                 CustomMaterialButton(
                   iconData: Icons.save,

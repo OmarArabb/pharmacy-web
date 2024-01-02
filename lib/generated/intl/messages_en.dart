@@ -20,18 +20,40 @@ typedef String MessageIfAbsent(String messageStr, List<dynamic> args);
 class MessageLookup extends MessageLookupByLibrary {
   String get localeName => 'en';
 
+  static String m0(howMany) =>
+      "${Intl.plural(howMany, zero: 'Paid', other: 'Unpaid')}";
+
+  static String m1(howMany) =>
+      "${Intl.plural(howMany, zero: 'Sent', one: 'In Preparation', other: 'Delivered')}";
+
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
+        "All": MessageLookupByLibrary.simpleMessage("All"),
         "addItemBu": MessageLookupByLibrary.simpleMessage("Add the Item"),
         "addItems": MessageLookupByLibrary.simpleMessage("Add Items"),
+        "arName": MessageLookupByLibrary.simpleMessage("Arabic name"),
         "categoryItem": MessageLookupByLibrary.simpleMessage("Category"),
+        "categoryName": MessageLookupByLibrary.simpleMessage("Category_name"),
+        "change": MessageLookupByLibrary.simpleMessage("Change"),
+        "changeLang": MessageLookupByLibrary.simpleMessage("Change Language"),
+        "close": MessageLookupByLibrary.simpleMessage("Close"),
+        "create": MessageLookupByLibrary.simpleMessage("Create"),
+        "createNewCategory":
+            MessageLookupByLibrary.simpleMessage("Create New Category"),
+        "createNewFactory":
+            MessageLookupByLibrary.simpleMessage("Create New Factory"),
         "emptyData":
             MessageLookupByLibrary.simpleMessage("Please,Fill all data"),
+        "enName": MessageLookupByLibrary.simpleMessage("English name"),
         "expDateItem": MessageLookupByLibrary.simpleMessage("Exp Date"),
         "factoryItem": MessageLookupByLibrary.simpleMessage("Factory"),
+        "factoryName": MessageLookupByLibrary.simpleMessage("made_by_name"),
         "imageItem": MessageLookupByLibrary.simpleMessage("Image"),
-        "nameItem": MessageLookupByLibrary.simpleMessage("Name"),
+        "name": MessageLookupByLibrary.simpleMessage("marketing_name"),
+        "nameItem": MessageLookupByLibrary.simpleMessage("English Name"),
         "numberItem": MessageLookupByLibrary.simpleMessage("No."),
+        "orderPaymentStatus": m0,
+        "orderStatus": m1,
         "orders": MessageLookupByLibrary.simpleMessage("Orders"),
         "priceItem": MessageLookupByLibrary.simpleMessage("Price"),
         "products": MessageLookupByLibrary.simpleMessage("Products"),
@@ -41,6 +63,11 @@ class MessageLookup extends MessageLookupByLibrary {
         "scientificNameItem":
             MessageLookupByLibrary.simpleMessage("Scientific Name"),
         "search": MessageLookupByLibrary.simpleMessage("Search"),
+        "selectCategory":
+            MessageLookupByLibrary.simpleMessage("Select Category"),
+        "selectFactory": MessageLookupByLibrary.simpleMessage("Select Factory"),
+        "settings": MessageLookupByLibrary.simpleMessage("Settings"),
+        "sp": MessageLookupByLibrary.simpleMessage("SP"),
         "toastPosition": MessageLookupByLibrary.simpleMessage("right")
       };
 }

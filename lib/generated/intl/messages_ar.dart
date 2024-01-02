@@ -20,19 +20,42 @@ typedef String MessageIfAbsent(String messageStr, List<dynamic> args);
 class MessageLookup extends MessageLookupByLibrary {
   String get localeName => 'ar';
 
+  static String m0(howMany) =>
+      "${Intl.plural(howMany, zero: 'مدفوع', other: 'غير مدفوع')}";
+
+  static String m1(howMany) =>
+      "${Intl.plural(howMany, zero: 'تم الٳرسال', one: 'قيد التحضير', other: 'مستلمة')}";
+
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
+        "All": MessageLookupByLibrary.simpleMessage("الكل"),
         "addItemBu": MessageLookupByLibrary.simpleMessage("ٳضافة المنتج"),
         "addItems": MessageLookupByLibrary.simpleMessage("ٳضافة منتجات"),
+        "arName": MessageLookupByLibrary.simpleMessage("الاسم بالعربية"),
         "categoryItem": MessageLookupByLibrary.simpleMessage("التصنيف"),
+        "categoryName":
+            MessageLookupByLibrary.simpleMessage("Arabic_Category_name"),
+        "change": MessageLookupByLibrary.simpleMessage("تغيير"),
+        "changeLang": MessageLookupByLibrary.simpleMessage("تغيير اللغة"),
+        "close": MessageLookupByLibrary.simpleMessage("ٳغلاق"),
+        "create": MessageLookupByLibrary.simpleMessage("ٳنشاء"),
+        "createNewCategory":
+            MessageLookupByLibrary.simpleMessage("ٳنشاء تصنيف جديد"),
+        "createNewFactory":
+            MessageLookupByLibrary.simpleMessage("ٳنشاء مصنع جديد"),
         "emptyData":
             MessageLookupByLibrary.simpleMessage("يرجى ملء كامل البيانات"),
-        "expDateItem":
-            MessageLookupByLibrary.simpleMessage("تاريخ انتهاء الصلاحية"),
+        "enName": MessageLookupByLibrary.simpleMessage("الاسم بالٳنجليزية"),
+        "expDateItem": MessageLookupByLibrary.simpleMessage("انتهاء الصلاحية"),
         "factoryItem": MessageLookupByLibrary.simpleMessage("المصنع"),
+        "factoryName":
+            MessageLookupByLibrary.simpleMessage("made_by_Arabic_name"),
         "imageItem": MessageLookupByLibrary.simpleMessage("الصورة"),
-        "nameItem": MessageLookupByLibrary.simpleMessage("الاسم"),
+        "name": MessageLookupByLibrary.simpleMessage("arabic_name"),
+        "nameItem": MessageLookupByLibrary.simpleMessage("الاسم بالعربية"),
         "numberItem": MessageLookupByLibrary.simpleMessage("الرقم"),
+        "orderPaymentStatus": m0,
+        "orderStatus": m1,
         "orders": MessageLookupByLibrary.simpleMessage("الطلبات"),
         "priceItem": MessageLookupByLibrary.simpleMessage("السعر"),
         "products": MessageLookupByLibrary.simpleMessage("المنتجات"),
@@ -42,6 +65,10 @@ class MessageLookup extends MessageLookupByLibrary {
         "scientificNameItem":
             MessageLookupByLibrary.simpleMessage("الاسم العلمي"),
         "search": MessageLookupByLibrary.simpleMessage("بحث"),
+        "selectCategory": MessageLookupByLibrary.simpleMessage("اختر التصنيف"),
+        "selectFactory": MessageLookupByLibrary.simpleMessage("اختر المصنع"),
+        "settings": MessageLookupByLibrary.simpleMessage("الٳعدادت"),
+        "sp": MessageLookupByLibrary.simpleMessage("ل.س"),
         "toastPosition": MessageLookupByLibrary.simpleMessage("left")
       };
 }

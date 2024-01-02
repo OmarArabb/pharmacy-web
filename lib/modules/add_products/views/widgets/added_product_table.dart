@@ -27,10 +27,11 @@ class ProductTable extends StatelessWidget {
       headingRowHeight: 60,
       clipBehavior: Clip.antiAlias,
       border: TableBorder.all(borderRadius: borderRadius, color: mainColor),
+      columnSpacing: 24,
       headingRowColor: MaterialStateColor.resolveWith((states) {
         return mainColor;
       }),
-      headingTextStyle: Theme.of(context).textTheme.titleLarge,
+      headingTextStyle: Theme.of(context).textTheme.titleMedium,
       columns: <DataColumn>[
         DataColumn(label: LabelText(data: translator.numberItem)),
         DataColumn(label: LabelText(data: translator.imageItem)),
@@ -51,7 +52,7 @@ class ProductTable extends StatelessWidget {
             width: 60,
             child: Image.memory(base64Decode(map![index]['image'])),
           )),
-          DataCell(Text(map![index]['marketing_name'])),
+          DataCell(Text(isArabic ? map![index]['arabic_name'] : map![index]['marketing_name'])),
           DataCell(Text(map![index]['scientific_name'])),
           DataCell(Text(map![index]['Category_name'])),
           DataCell(Text(map![index]['made_by_name'])),

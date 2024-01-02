@@ -3,9 +3,9 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:pharmacy_project/generated/l10n.dart';
 import 'package:pharmacy_project/layout/cubit/cubit.dart';
 import 'package:pharmacy_project/layout/cubit/states.dart';
+import 'package:pharmacy_project/modules/products/cubit/cubit.dart';
 import 'package:pharmacy_project/shared/componentes/custom_text_form_field.dart';
 import 'package:pharmacy_project/layout/view/widgets/side_bar.dart';
-import 'package:pharmacy_project/main/cubit/cubit.dart';
 import 'package:pharmacy_project/shared/constants.dart';
 import 'package:pharmacy_project/shared/styles/colors.dart';
 
@@ -33,10 +33,10 @@ class PharmacyLayout extends StatelessWidget {
         selectedIcon: const Icon(Icons.feed),
         label: Text(translator.orders),
       ),
-      const NavigationRailDestination(
-        icon: Icon(Icons.settings),
-        selectedIcon: Icon(Icons.settings),
-        label: Text('Settings'),
+      NavigationRailDestination(
+        icon: const Icon(Icons.settings),
+        selectedIcon: const Icon(Icons.settings),
+        label: Text(translator.settings),
       ),
     ];
 
@@ -46,8 +46,8 @@ class PharmacyLayout extends StatelessWidget {
           listener: (context, state) {},
           builder: (context, state) {
             AppCubit cubit = AppCubit.get(context);
+            GetProductsCubit getProductsCubit = GetProductsCubit.get(context);
             return Scaffold(
-              // appBar: AppBar(),
               body: Padding(
                 padding: const EdgeInsets.all(12.0),
                 child: Row(
@@ -79,19 +79,42 @@ class PharmacyLayout extends StatelessWidget {
                                   CustomTextFormField(
                                     textInputAction: TextInputAction.none,
                                     controller: searchController,
-                                    onChange: (value) {},
+                                    onSubmit: (String value) {
+                                      getProductsCubit.name = value;
+                                      getProductsCubit.searchProducts();
+                                      searchController.clear();
+                                      if (value.isEmpty) {
+                                        GetProductsCubit.get(context)
+                                            .getProducts();
+                                      }
+                                    },
                                     label: translator.search,
                                     icon: Icons.search_outlined,
                                   ),
                                   const SizedBox(
                                     width: 15,
                                   ),
-                                  IconButton(
-                                      onPressed: () {
-                                        MainCubit.get(context).changeLanguage();
-                                      },
-                                      icon:
-                                          const Icon(Icons.translate_outlined))
+                                  PopupMenuButton(
+                                    itemBuilder: (context) => List.generate(
+                                      getProductsCubit.categoryName.length,
+                                      (index) => PopupMenuItem(
+                                        value: getProductsCubit
+                                            .categoryName[index],
+                                        child: Text(getProductsCubit
+                                            .categoryName[index]),
+                                      ),
+                                    ),
+                                    icon: const Icon(Icons.filter_alt_outlined),
+                                    onSelected: (value) {
+                                      if (value == translator.All) {
+                                        getProductsCubit.getProducts();
+                                      } else {
+                                        getProductsCubit.categoryData = value;
+                                        getProductsCubit.searchProducts();
+                                      }
+                                      print(value);
+                                    },
+                                  ),
                                 ],
                               ),
                             ),

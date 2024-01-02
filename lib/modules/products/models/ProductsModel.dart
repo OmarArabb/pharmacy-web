@@ -20,7 +20,7 @@ class ProductsModel {
   }
   late int? status;
   late String? message;
-  late List<Data>? data ;
+  List<Data>? data ;
 
 
 }

@@ -3,7 +3,7 @@ import 'package:pharmacy_project/shared/styles/colors.dart';
 
 ThemeData themeData = ThemeData(
   primarySwatch: primarySwatch,
-  textTheme: TextTheme(titleLarge: TextStyle(color: secondaryColor)),
+  textTheme: TextTheme(titleMedium: TextStyle(color: secondaryColor)),
   iconTheme: IconThemeData(color: secondaryColor),
   navigationRailTheme: NavigationRailThemeData(
       unselectedIconTheme: IconThemeData(color: thirdColor),

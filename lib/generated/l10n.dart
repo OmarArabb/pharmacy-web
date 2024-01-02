@@ -110,10 +110,10 @@ class S {
     );
   }
 
-  /// `Name`
+  /// `English Name`
   String get nameItem {
     return Intl.message(
-      'Name',
+      'English Name',
       name: 'nameItem',
       desc: '',
       args: [],
@@ -225,6 +225,191 @@ class S {
     return Intl.message(
       'right',
       name: 'toastPosition',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Settings`
+  String get settings {
+    return Intl.message(
+      'Settings',
+      name: 'settings',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Create New Category`
+  String get createNewCategory {
+    return Intl.message(
+      'Create New Category',
+      name: 'createNewCategory',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Create New Factory`
+  String get createNewFactory {
+    return Intl.message(
+      'Create New Factory',
+      name: 'createNewFactory',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `English name`
+  String get enName {
+    return Intl.message(
+      'English name',
+      name: 'enName',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Arabic name`
+  String get arName {
+    return Intl.message(
+      'Arabic name',
+      name: 'arName',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Create`
+  String get create {
+    return Intl.message(
+      'Create',
+      name: 'create',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Change Language`
+  String get changeLang {
+    return Intl.message(
+      'Change Language',
+      name: 'changeLang',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Close`
+  String get close {
+    return Intl.message(
+      'Close',
+      name: 'close',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Select Category`
+  String get selectCategory {
+    return Intl.message(
+      'Select Category',
+      name: 'selectCategory',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Select Factory`
+  String get selectFactory {
+    return Intl.message(
+      'Select Factory',
+      name: 'selectFactory',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Change`
+  String get change {
+    return Intl.message(
+      'Change',
+      name: 'change',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `made_by_name`
+  String get factoryName {
+    return Intl.message(
+      'made_by_name',
+      name: 'factoryName',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Category_name`
+  String get categoryName {
+    return Intl.message(
+      'Category_name',
+      name: 'categoryName',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `marketing_name`
+  String get name {
+    return Intl.message(
+      'marketing_name',
+      name: 'name',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `All`
+  String get All {
+    return Intl.message(
+      'All',
+      name: 'All',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `{howMany, plural, zero{Sent} one{In Preparation} other{Delivered}}`
+  String orderStatus(num howMany) {
+    return Intl.plural(
+      howMany,
+      zero: 'Sent',
+      one: 'In Preparation',
+      other: 'Delivered',
+      name: 'orderStatus',
+      desc: '',
+      args: [howMany],
+    );
+  }
+
+  /// `{howMany, plural, zero{Paid} other{Unpaid}}`
+  String orderPaymentStatus(num howMany) {
+    return Intl.plural(
+      howMany,
+      zero: 'Paid',
+      other: 'Unpaid',
+      name: 'orderPaymentStatus',
+      desc: '',
+      args: [howMany],
+    );
+  }
+
+  /// `SP`
+  String get sp {
+    return Intl.message(
+      'SP',
+      name: 'sp',
       desc: '',
       args: [],
     );
