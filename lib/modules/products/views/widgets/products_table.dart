@@ -59,12 +59,16 @@ class ProductsTable extends StatelessWidget {
           DataCell(isArabic
               ? Text(dataModel[index].madeByArabicName!)
               : Text(dataModel[index].madeByName!)),
-          DataCell(Text(
-            dataModel[index].expDate!,
-            style: TextStyle(
-                color : dateTime.isAfter(DateTime.parse(dataModel[index].expDate!)) ? Colors.red : Colors.black
+          DataCell(
+            Text(
+              dataModel[index].expDate!,
+              style: TextStyle(
+                  color: dateTime
+                          .isAfter(DateTime.parse(dataModel[index].expDate!))
+                      ? Colors.red
+                      : Colors.black),
             ),
-          ),),
+          ),
           DataCell(Text(dataModel[index].quantity.toString())),
           DataCell(Text(dataModel[index].price.toString())),
         ]),

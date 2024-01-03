@@ -32,6 +32,16 @@
   "categoryName": "Category_name",
   "name": "marketing_name",
   "All" : "All",
+  "total": "Total",
+  "email": "Email Address",
+  "phone": "Phone",
+  "address": "Address",
+  "city": "City",
+  "pharmacyName": "Pharmacy Name",
+  "pharmicstName": "Pharmacist Name",
+
+  "upateOrderStatus": "Update Status Order",
+  "paymentStatus":"Update Payment Status",
 
   "orderStatus": "{howMany, plural, zero{Sent} one{In Preparation} other{Delivered}}",
   "orderPaymentStatus" : "{howMany, plural, zero{Paid} other{Unpaid}}",

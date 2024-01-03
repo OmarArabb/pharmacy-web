@@ -31,18 +31,21 @@ class MessageLookup extends MessageLookupByLibrary {
         "All": MessageLookupByLibrary.simpleMessage("الكل"),
         "addItemBu": MessageLookupByLibrary.simpleMessage("ٳضافة المنتج"),
         "addItems": MessageLookupByLibrary.simpleMessage("ٳضافة منتجات"),
+        "address": MessageLookupByLibrary.simpleMessage("العنوان"),
         "arName": MessageLookupByLibrary.simpleMessage("الاسم بالعربية"),
         "categoryItem": MessageLookupByLibrary.simpleMessage("التصنيف"),
         "categoryName":
             MessageLookupByLibrary.simpleMessage("Arabic_Category_name"),
         "change": MessageLookupByLibrary.simpleMessage("تغيير"),
         "changeLang": MessageLookupByLibrary.simpleMessage("تغيير اللغة"),
+        "city": MessageLookupByLibrary.simpleMessage("المدينة"),
         "close": MessageLookupByLibrary.simpleMessage("ٳغلاق"),
         "create": MessageLookupByLibrary.simpleMessage("ٳنشاء"),
         "createNewCategory":
             MessageLookupByLibrary.simpleMessage("ٳنشاء تصنيف جديد"),
         "createNewFactory":
             MessageLookupByLibrary.simpleMessage("ٳنشاء مصنع جديد"),
+        "email": MessageLookupByLibrary.simpleMessage("الٳيميل"),
         "emptyData":
             MessageLookupByLibrary.simpleMessage("يرجى ملء كامل البيانات"),
         "enName": MessageLookupByLibrary.simpleMessage("الاسم بالٳنجليزية"),
@@ -57,6 +60,11 @@ class MessageLookup extends MessageLookupByLibrary {
         "orderPaymentStatus": m0,
         "orderStatus": m1,
         "orders": MessageLookupByLibrary.simpleMessage("الطلبات"),
+        "paymentStatus":
+            MessageLookupByLibrary.simpleMessage("تحديث حالة الدفع"),
+        "pharmacyName": MessageLookupByLibrary.simpleMessage("اسم الصيدلية"),
+        "pharmicstName": MessageLookupByLibrary.simpleMessage("اسم الصيدلاني"),
+        "phone": MessageLookupByLibrary.simpleMessage("الهاتف"),
         "priceItem": MessageLookupByLibrary.simpleMessage("السعر"),
         "products": MessageLookupByLibrary.simpleMessage("المنتجات"),
         "quantityItem": MessageLookupByLibrary.simpleMessage("الكمية"),
@@ -69,6 +77,9 @@ class MessageLookup extends MessageLookupByLibrary {
         "selectFactory": MessageLookupByLibrary.simpleMessage("اختر المصنع"),
         "settings": MessageLookupByLibrary.simpleMessage("الٳعدادت"),
         "sp": MessageLookupByLibrary.simpleMessage("ل.س"),
-        "toastPosition": MessageLookupByLibrary.simpleMessage("left")
+        "toastPosition": MessageLookupByLibrary.simpleMessage("left"),
+        "total": MessageLookupByLibrary.simpleMessage("المجموع"),
+        "upateOrderStatus":
+            MessageLookupByLibrary.simpleMessage("تحديث حالة الطلب")
       };
 }

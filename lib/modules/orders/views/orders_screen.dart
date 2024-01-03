@@ -13,9 +13,12 @@ class OrdersScreen extends StatelessWidget {
       listener: (context, state) {},
       builder: (context, state) {
         OrderCubit cubit = OrderCubit.get(context);
-        if(cubit.allOrder.isEmpty){
+        if(cubit.allOrder.isEmpty ){
           return const Center(child: CircularProgressIndicator());
         }
+        // if(cubit.allOrder.isEmpty){
+        //   return Center(child: Text('Not Found Any Order !',style: TextStyle(fontSize: 36,color: mainColor),));
+        // }
         return Column(
           children: [
             OrderItems(orderMoodel: cubit.allOrder),

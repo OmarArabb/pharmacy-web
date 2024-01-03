@@ -1,7 +1,7 @@
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:pharmacy_project/generated/l10n.dart';
 import 'package:pharmacy_project/modules/products/cubit/states.dart';
 import 'package:pharmacy_project/modules/products/models/ProductsModel.dart';
+import 'package:pharmacy_project/shared/constants.dart';
 import 'package:pharmacy_project/shared/network/dio_helper.dart';
 
 class GetProductsCubit extends Cubit<GetProductsStates> {
@@ -33,20 +33,20 @@ class GetProductsCubit extends Cubit<GetProductsStates> {
       productsModel = ProductsModel.fromJson(value.data);
       emit(GetProductsSuccessState());
       name = null;
-      categoryData = null;
+      // categoryData = null;
     }).catchError((error) {
       emit(GetProductsErrorState());
       print(error.toString());
     });
   }
 
-  Future<void> getCategory(context) async {
+  Future<void> getCategory() async {
     categoryName.clear();
-    categoryName.add(S.of(context).All);
+    categoryName.add(isArabic ? 'الكل' : 'All');
     DioHelper.getData(url: 'getAllCategorys').then((value) {
       category = value.data!['data'];
       for (var element in category) {
-        categoryName.add(element[S.of(context).categoryName]);
+        categoryName.add(element[isArabic ? 'Arabic_Category_name' : 'Category_name']);
       }
       print(categoryName);
     });

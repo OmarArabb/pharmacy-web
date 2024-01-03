@@ -21,7 +21,7 @@ class Pharmacy extends StatelessWidget {
         BlocProvider(
           create: (context) => MainCubit(),
         ),
-        BlocProvider(create: (context) => GetProductsCubit()..getProducts(),),
+        BlocProvider(create: (context) => GetProductsCubit()..getProducts()..getCategory(),),
         BlocProvider(create: (context) => AddProductsCubit(),),
         BlocProvider(create: (context) => OrderCubit(),)
       ],

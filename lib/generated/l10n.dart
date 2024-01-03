@@ -380,6 +380,96 @@ class S {
     );
   }
 
+  /// `Total`
+  String get total {
+    return Intl.message(
+      'Total',
+      name: 'total',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Email Address`
+  String get email {
+    return Intl.message(
+      'Email Address',
+      name: 'email',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Phone`
+  String get phone {
+    return Intl.message(
+      'Phone',
+      name: 'phone',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Address`
+  String get address {
+    return Intl.message(
+      'Address',
+      name: 'address',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `City`
+  String get city {
+    return Intl.message(
+      'City',
+      name: 'city',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Pharmacy Name`
+  String get pharmacyName {
+    return Intl.message(
+      'Pharmacy Name',
+      name: 'pharmacyName',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Pharmacist Name`
+  String get pharmicstName {
+    return Intl.message(
+      'Pharmacist Name',
+      name: 'pharmicstName',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Update Status Order`
+  String get upateOrderStatus {
+    return Intl.message(
+      'Update Status Order',
+      name: 'upateOrderStatus',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Update Payment Status`
+  String get paymentStatus {
+    return Intl.message(
+      'Update Payment Status',
+      name: 'paymentStatus',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `{howMany, plural, zero{Sent} one{In Preparation} other{Delivered}}`
   String orderStatus(num howMany) {
     return Intl.plural(

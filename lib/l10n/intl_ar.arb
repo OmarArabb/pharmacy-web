@@ -38,6 +38,16 @@
   "categoryName" : "Arabic_Category_name",
   "name" : "arabic_name",
   "All" : "الكل",
+  "total": "المجموع",
+  "email": "الٳيميل",
+  "phone": "الهاتف",
+  "address": "العنوان",
+  "city": "المدينة",
+  "pharmacyName": "اسم الصيدلية",
+  "pharmicstName": "اسم الصيدلاني",
+
+  "upateOrderStatus": "تحديث حالة الطلب",
+  "paymentStatus":"تحديث حالة الدفع",
 
   "orderStatus": "{howMany, plural, zero{تم الٳرسال} one{قيد التحضير} other{مستلمة}}",
   "orderPaymentStatus" : "{howMany, plural, zero{مدفوع} other{غير مدفوع}}",

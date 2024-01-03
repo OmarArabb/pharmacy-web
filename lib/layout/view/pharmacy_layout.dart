@@ -114,6 +114,9 @@ class PharmacyLayout extends StatelessWidget {
                                       }
                                       print(value);
                                     },
+                                    // onOpened: (){
+                                    //   getProductsCubit.getCategory(context);
+                                    // },
                                   ),
                                 ],
                               ),

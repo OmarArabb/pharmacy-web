@@ -37,13 +37,13 @@ class OrderDetails extends StatelessWidget {
                   children: [
                     UserDataText(
                         text:
-                            'Pharmacy Name : ${profileData![cubit.allOrder[index].pharmacyId! - 1].fullName}'),
+                            '${translator.pharmicstName} : ${profileData![cubit.allOrder[index].pharmacyId! - 1].fullName}'),
                     UserDataText(
                         text:
-                            'Pharmacist Name : ${profileData![cubit.allOrder[index].pharmacyId! - 1].pharmacyName}'),
+                            '${translator.pharmacyName}: ${profileData![cubit.allOrder[index].pharmacyId! - 1].pharmacyName}'),
                     UserDataText(
                         text:
-                            'Phone Number : ${profileData![cubit.allOrder[index].pharmacyId! - 1].phoneNumber}'),
+                            '${translator.phone} : ${profileData![cubit.allOrder[index].pharmacyId! - 1].phoneNumber}'),
                   ],
                 ),
                 const Expanded(child: SizedBox()),
@@ -52,13 +52,13 @@ class OrderDetails extends StatelessWidget {
                   children: [
                     UserDataText(
                         text:
-                            'Email Address : ${profileData![cubit.allOrder[index].pharmacyId! - 1].emailAddress}'),
+                            '${translator.email} : ${profileData![cubit.allOrder[index].pharmacyId! - 1].emailAddress}'),
                     UserDataText(
                         text:
-                            'Address : ${profileData![cubit.allOrder[index].pharmacyId! - 1].pharmacyAddress}'),
+                            '${translator.address} : ${profileData![cubit.allOrder[index].pharmacyId! - 1].pharmacyAddress}'),
                     UserDataText(
                         text:
-                            'City : ${profileData![cubit.allOrder[index].pharmacyId! - 1].cityName}'),
+                            '${translator.city} : ${isArabic ? profileData![cubit.allOrder[index].pharmacyId! - 1].cityArabicName : profileData![cubit.allOrder[index].pharmacyId! - 1].cityName}'),
                   ],
                 ),
               ],
@@ -74,11 +74,12 @@ class OrderDetails extends StatelessWidget {
                       headingTextStyle: const TextStyle(
                         fontSize: 18,
                       ),
-                      columns: const [
-                        DataColumn(label: Text('Image')),
-                        DataColumn(label: Text('Name')),
-                        DataColumn(label: Text('Price')),
-                        DataColumn(label: Text('Total')),
+                      columns: [
+                        DataColumn(label: Text(translator.imageItem)),
+                        DataColumn(label: Text(translator.nameItem)),
+                        DataColumn(label: Text(translator.quantityItem)),
+                        DataColumn(label: Text(translator.priceItem)),
+                        DataColumn(label: Text(translator.total)),
                       ],
                       rows: List.generate(
                         productsData!.length,
@@ -95,6 +96,7 @@ class OrderDetails extends StatelessWidget {
                             ),
                             DataCell(Text(
                                 '${isArabic ? productsData![index].arabicName : productsData![index].marketingName}')),
+                            DataCell(Text('${productsData![index].quantity}')),
                             DataCell(Text('${productsData![index].price}')),
                             DataCell(Text(
                                 '${productsData![index].priceAllproducts}')),
@@ -125,7 +127,7 @@ class OrderDetails extends StatelessWidget {
                 Navigator.pop(context);
               },
               child: Text(
-                  'Update Payment Status : ${translator.orderPaymentStatus(orders[index].paymentStatus! - 1)}'),
+                  '${translator.paymentStatus} : ${translator.orderPaymentStatus(orders[index].paymentStatus! - 1)}'),
             ),
             TextButton(
               onPressed: () {
@@ -142,7 +144,7 @@ class OrderDetails extends StatelessWidget {
                 Navigator.pop(context);
               },
               child: Text(
-                'Update Status Order : ${translator.orderStatus(orders[index].status! - 1)}',
+                '${translator.upateOrderStatus} : ${translator.orderStatus(orders[index].status! - 1)}',
               ),
             ),
             const Spacer(),
@@ -150,7 +152,7 @@ class OrderDetails extends StatelessWidget {
               onPressed: () {
                 Navigator.pop(context);
               },
-              child: const Text('close'),
+              child: Text(translator.close),
             ),
           ],
         ),

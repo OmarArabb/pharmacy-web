@@ -31,17 +31,20 @@ class MessageLookup extends MessageLookupByLibrary {
         "All": MessageLookupByLibrary.simpleMessage("All"),
         "addItemBu": MessageLookupByLibrary.simpleMessage("Add the Item"),
         "addItems": MessageLookupByLibrary.simpleMessage("Add Items"),
+        "address": MessageLookupByLibrary.simpleMessage("Address"),
         "arName": MessageLookupByLibrary.simpleMessage("Arabic name"),
         "categoryItem": MessageLookupByLibrary.simpleMessage("Category"),
         "categoryName": MessageLookupByLibrary.simpleMessage("Category_name"),
         "change": MessageLookupByLibrary.simpleMessage("Change"),
         "changeLang": MessageLookupByLibrary.simpleMessage("Change Language"),
+        "city": MessageLookupByLibrary.simpleMessage("City"),
         "close": MessageLookupByLibrary.simpleMessage("Close"),
         "create": MessageLookupByLibrary.simpleMessage("Create"),
         "createNewCategory":
             MessageLookupByLibrary.simpleMessage("Create New Category"),
         "createNewFactory":
             MessageLookupByLibrary.simpleMessage("Create New Factory"),
+        "email": MessageLookupByLibrary.simpleMessage("Email Address"),
         "emptyData":
             MessageLookupByLibrary.simpleMessage("Please,Fill all data"),
         "enName": MessageLookupByLibrary.simpleMessage("English name"),
@@ -55,6 +58,12 @@ class MessageLookup extends MessageLookupByLibrary {
         "orderPaymentStatus": m0,
         "orderStatus": m1,
         "orders": MessageLookupByLibrary.simpleMessage("Orders"),
+        "paymentStatus":
+            MessageLookupByLibrary.simpleMessage("Update Payment Status"),
+        "pharmacyName": MessageLookupByLibrary.simpleMessage("Pharmacy Name"),
+        "pharmicstName":
+            MessageLookupByLibrary.simpleMessage("Pharmacist Name"),
+        "phone": MessageLookupByLibrary.simpleMessage("Phone"),
         "priceItem": MessageLookupByLibrary.simpleMessage("Price"),
         "products": MessageLookupByLibrary.simpleMessage("Products"),
         "quantityItem": MessageLookupByLibrary.simpleMessage("Quantity"),
@@ -68,6 +77,9 @@ class MessageLookup extends MessageLookupByLibrary {
         "selectFactory": MessageLookupByLibrary.simpleMessage("Select Factory"),
         "settings": MessageLookupByLibrary.simpleMessage("Settings"),
         "sp": MessageLookupByLibrary.simpleMessage("SP"),
-        "toastPosition": MessageLookupByLibrary.simpleMessage("right")
+        "toastPosition": MessageLookupByLibrary.simpleMessage("right"),
+        "total": MessageLookupByLibrary.simpleMessage("Total"),
+        "upateOrderStatus":
+            MessageLookupByLibrary.simpleMessage("Update Status Order")
       };
 }

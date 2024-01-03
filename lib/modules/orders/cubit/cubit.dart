@@ -21,13 +21,6 @@ class OrderCubit extends Cubit<OrderStates> {
   List<OrderData> deliveredOrders = [];
   List<OrderData> allOrder = [];
 
-  // void changeOrderStatus(int index) {
-  //   print('index $index');
-  //   statusIndex = ++index;
-  //   // statusIndex = statusIndex! % 4 ;
-  //   print(statusIndex);
-  // }
-
   Color chooseColor(int state, int payment) {
     switch (state) {
       case 1 :
@@ -50,17 +43,7 @@ class OrderCubit extends Cubit<OrderStates> {
     return secondaryColor;
   }
 
-  IconData chooseIcon(int state) {
-    switch (state) {
-      case 1:
-        return Icons.schedule_send_rounded;
-      case 2:
-        return Icons.workspaces;
-      case 3:
-        return Icons.done;
-    }
-    return Icons.error;
-  }
+
 
   Future<void> getProfileData() async {
     emit(GetProfileLoadingState());

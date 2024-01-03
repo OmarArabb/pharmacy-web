@@ -33,7 +33,7 @@ class AppCubit extends Cubit<AppStates> {
       AddProductsCubit.get(context).getFactory(context);
     }
     if(index == 0){
-      GetProductsCubit.get(context).getCategory(context);
+      GetProductsCubit.get(context).getCategory();
       GetProductsCubit.get(context).getProducts();
     }
     if(index == 2){
