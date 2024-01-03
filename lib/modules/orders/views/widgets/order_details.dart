@@ -11,7 +11,8 @@ class OrderDetails extends StatelessWidget {
       {super.key,
       required this.profileData,
       required this.index,
-      required this.productsData, required this.orders});
+      required this.productsData,
+      required this.orders});
 
   final List<Data>? profileData;
   final List<Products>? productsData;
@@ -21,6 +22,7 @@ class OrderDetails extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     OrderCubit cubit = OrderCubit.get(context);
+    Data profile = cubit.profilesDataModel!.data!.firstWhere((map) => orders[index].pharmacyId == map.id);
     S translator = S.of(context);
     return AlertDialog(
       title: Text('Order ID : ${cubit.allOrder[index].orderId}'),
@@ -37,13 +39,13 @@ class OrderDetails extends StatelessWidget {
                   children: [
                     UserDataText(
                         text:
-                            '${translator.pharmicstName} : ${profileData![cubit.allOrder[index].pharmacyId! - 1].fullName}'),
+                            '${translator.pharmicstName} : ${profile.fullName}'),
                     UserDataText(
                         text:
-                            '${translator.pharmacyName}: ${profileData![cubit.allOrder[index].pharmacyId! - 1].pharmacyName}'),
+                            '${translator.pharmacyName}: ${profile.pharmacyName}'),
                     UserDataText(
                         text:
-                            '${translator.phone} : ${profileData![cubit.allOrder[index].pharmacyId! - 1].phoneNumber}'),
+                            '${translator.phone} : ${profile.phoneNumber}'),
                   ],
                 ),
                 const Expanded(child: SizedBox()),
@@ -52,13 +54,13 @@ class OrderDetails extends StatelessWidget {
                   children: [
                     UserDataText(
                         text:
-                            '${translator.email} : ${profileData![cubit.allOrder[index].pharmacyId! - 1].emailAddress}'),
+                            '${translator.email} : ${profile.emailAddress}'),
                     UserDataText(
                         text:
-                            '${translator.address} : ${profileData![cubit.allOrder[index].pharmacyId! - 1].pharmacyAddress}'),
+                            '${translator.address} : ${profile.pharmacyAddress}'),
                     UserDataText(
                         text:
-                            '${translator.city} : ${isArabic ? profileData![cubit.allOrder[index].pharmacyId! - 1].cityArabicName : profileData![cubit.allOrder[index].pharmacyId! - 1].cityName}'),
+                            '${translator.city} : ${isArabic ? profile.cityArabicName : profile.cityName}'),
                   ],
                 ),
               ],
@@ -120,7 +122,8 @@ class OrderDetails extends StatelessWidget {
                     .updatePaymentOrderStatus(
                   orderId: orders[index].orderId!,
                   orderStatus: (orders[index].paymentStatus! - 1),
-                ).then((value) {
+                )
+                    .then((value) {
                   cubit.getOrdersData();
                   // print('${orders[index].status}sdfg');
                 });
@@ -135,11 +138,11 @@ class OrderDetails extends StatelessWidget {
                     .updateOrderStatus(
                   orderId: orders[index].orderId!,
                   orderStatus: (orders[index].status! + 1),
-                ).then((value) {
+                )
+                    .then((value) {
                   cubit.getOrdersData();
                   print('${orders[index].status}sdfg');
                 });
-
 
                 Navigator.pop(context);
               },
