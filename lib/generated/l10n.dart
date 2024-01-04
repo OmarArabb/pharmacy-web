@@ -470,6 +470,16 @@ class S {
     );
   }
 
+  /// `Not Found`
+  String get notFound {
+    return Intl.message(
+      'Not Found',
+      name: 'notFound',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `{howMany, plural, zero{Sent} one{In Preparation} other{Delivered}}`
   String orderStatus(num howMany) {
     return Intl.plural(

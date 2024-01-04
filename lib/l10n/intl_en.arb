@@ -43,6 +43,8 @@
   "upateOrderStatus": "Update Status Order",
   "paymentStatus":"Update Payment Status",
 
+  "notFound" : "Not Found",
+
   "orderStatus": "{howMany, plural, zero{Sent} one{In Preparation} other{Delivered}}",
   "orderPaymentStatus" : "{howMany, plural, zero{Paid} other{Unpaid}}",
   "sp" : "SP"

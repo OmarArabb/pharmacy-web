@@ -137,7 +137,11 @@ class AddItemSection extends StatelessWidget {
                   iconData: Icons.add,
                   text: translator.addItemBu,
                   onPressed: () async {
-                    if (cubit.nameContoller.text.isEmpty ||
+                    if(! cubit.categoryName.contains(cubit.categoryContoller.text)){
+                      showToast(translator, '${translator.categoryItem} ${translator.notFound}');
+                    }else if(! cubit.factoryName.contains(cubit.factoryContoller.text)){
+                      showToast(translator, '${translator.factoryItem} ${translator.notFound}');
+                    } else if (cubit.nameContoller.text.isEmpty ||
                         cubit.arabicNameContoller.text.isEmpty ||
                         cubit.scientificNameContoller.text.isEmpty ||
                         cubit.categoryContoller.text.isEmpty ||
@@ -146,7 +150,7 @@ class AddItemSection extends StatelessWidget {
                         cubit.quantityContoller.text.isEmpty ||
                         cubit.priceContoller.text.isEmpty ||
                         cubit.image.isEmpty) {
-                      showToast(translator);
+                      showToast(translator,translator.emptyData);
                     } else {
                       cubit.addProductToMap();
                     }

@@ -54,6 +54,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "imageItem": MessageLookupByLibrary.simpleMessage("Image"),
         "name": MessageLookupByLibrary.simpleMessage("marketing_name"),
         "nameItem": MessageLookupByLibrary.simpleMessage("English Name"),
+        "notFound": MessageLookupByLibrary.simpleMessage("Not Found"),
         "numberItem": MessageLookupByLibrary.simpleMessage("No."),
         "orderPaymentStatus": m0,
         "orderStatus": m1,

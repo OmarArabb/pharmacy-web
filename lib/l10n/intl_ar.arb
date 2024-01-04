@@ -48,6 +48,7 @@
 
   "upateOrderStatus": "تحديث حالة الطلب",
   "paymentStatus":"تحديث حالة الدفع",
+  "notFound" : "غير موجود",
 
   "orderStatus": "{howMany, plural, zero{تم الٳرسال} one{قيد التحضير} other{مستلمة}}",
   "orderPaymentStatus" : "{howMany, plural, zero{مدفوع} other{غير مدفوع}}",

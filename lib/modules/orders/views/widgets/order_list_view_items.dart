@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:pharmacy_project/generated/l10n.dart';
 import 'package:pharmacy_project/modules/orders/cubit/cubit.dart';
 import 'package:pharmacy_project/modules/orders/models/OrderModel.dart';
-import 'package:pharmacy_project/modules/orders/models/ProfilesDataModel.dart';
 import 'package:pharmacy_project/modules/orders/views/widgets/order_details.dart';
 import 'package:pharmacy_project/modules/orders/views/widgets/text_order_items.dart';
 import 'package:pharmacy_project/shared/constants.dart';
@@ -42,10 +41,6 @@ class OrderListViewItem extends StatelessWidget {
         padding: const EdgeInsets.symmetric(horizontal: 12.0),
         child: InkWell(
           onTap: () {
-            Data da = cubit.profilesDataModel!.data!
-                .firstWhere((map) => orders[index].pharmacyId == map.id);
-            print(da.pharmacyName);
-            print('omar');
             showDialog(
                 context: context,
                 builder: (context) =>

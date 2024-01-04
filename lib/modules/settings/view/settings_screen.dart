@@ -88,7 +88,7 @@ class SettingsScreen extends StatelessWidget {
                     onPressed: () {
                       if (categoryEnNamecontroller.text.isEmpty ||
                           categoryArNamecontroller.text.isEmpty) {
-                        showToast(translator);
+                        showToast(translator,translator.emptyData);
                       } else {
                         cubit.newItem.addAll({
                           "Category_name": categoryEnNamecontroller.text,
@@ -138,7 +138,7 @@ class SettingsScreen extends StatelessWidget {
                     onPressed: () {
                       if (factoryEnNamecontroller.text.isEmpty ||
                           factoryArNamecontroller.text.isEmpty) {
-                        showToast(translator);
+                        showToast(translator,translator.emptyData);
                       } else {
                         cubit.newItem.addAll({
                           "made_by_name": factoryEnNamecontroller.text,
